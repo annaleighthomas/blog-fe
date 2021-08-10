@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './Post.css';
 
 const Post = () => {
+
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+
+  const handleChange = ({ target }) => {
+    switch (target.name) {
+      case 'title':
+        setTitle(target.value);
+        break;
+      case 'body':
+        setBody(target.value);
+        break;
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div>
-      <input placeholder="title" />
-      <textarea placeholder="blog post"></textarea>
-    </div>
+    <form className={styles.Post}
+      onSubmit={handleSubmit}>
+      <input
+        required
+        name="title"
+        value={title}
+        placeholder="title"
+        onChange={handleChange}
+      />
+
+      <textarea
+        required
+        name="body"
+        value={body}
+        placeholder="blog post"
+        onChange={handleChange}>
+      </textarea>
+
+      <button>post</button>
+    </form>
   );
 };
 
