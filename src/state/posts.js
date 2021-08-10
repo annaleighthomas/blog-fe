@@ -3,7 +3,7 @@ import { getPosts } from '../utils/blog-api';
 
 export const usePosts = () => {
   const [loading, setLoading] = useState(true);
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     getPosts()
