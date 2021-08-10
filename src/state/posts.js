@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
+import { getPosts } from '../utils/blog-api';
 
-export const usePost = (id) => {
+export const usePosts = () => {
   const [loading, setLoading] = useState(true);
-  const [post, setPost] = useState(null);
+  const [posts, setPosts] = useState(null);
 
   useEffect(() => {
-    getPost(id)
-      .then((post) => {
-        setPost(post);
+    getPosts()
+      .then((posts) => {
+        setPosts(posts);
         setLoading(false);
       });
-  }, [id]);
+  }, []);
 
-  return [post, loading];
+  return [posts, loading];
 };
