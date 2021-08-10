@@ -1,0 +1,24 @@
+.BlogPage h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 5rem;
+  color: #ffffff;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.BlogPage h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: rgb(191, 59, 3);
+  margin: 0;
+  padding-left: 20px;
+}
+
+.BlogPage img {
+  height: 15rem;
+  padding: 10px
+}
+
+.BlogPage h5 {
+  text-align: center;
+}
