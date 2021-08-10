@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import './app.css';
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from 'react-router-dom';
 import BlogPage from '../main/BlogPage';
 import Post from '../posts/Post';
@@ -23,7 +23,7 @@ class App extends Component {
                 <BlogPage {...routerProps} />
               )} />
 
-              <Route path="/create-post" exact={true} ender={routerProps => (
+              <Route path="/create-post" exact={true} render={routerProps => (
                 <Post {...routerProps} />
               )} />
 
