@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { addPost } from '../../utils/blog-api';
+import { useHistory } from 'react-router-dom';
 import styles from './Post.css';
 
 const Post = () => {
-
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
+  const history = useHistory();
 
   const handleChange = ({ target }) => {
     switch (target.name) {
@@ -19,7 +21,13 @@ const Post = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    addPost({ title, body })
+      .then(() => {
+        history.push('/');
+      });
   };
+
 
   return (
     <form className={styles.Post}
