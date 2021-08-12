@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { usePosts } from '../../state/posts';
+import { usePosts } from '../../state/usePosts';
 import styles from './BlogPage.css';
 
 const BlogPage = () => {
   const [posts] = usePosts();
 
+  const postList = posts.map(post => {
+    return (
+      <li key={post.id}>
+        <h2>{post.title}</h2>
+        <p>{post.body}</p>
+      </li>
+    );
+  });
+  
   return (
     <span className={styles.BlogPage}>
       <h1>
@@ -27,13 +36,7 @@ const BlogPage = () => {
       <h5>
         <Link to={'/create-post'}>Create Post Here</Link>
       </h5>
-      <article>
-        {posts.map(post =>
-          <>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
-          </>)}
-      </article>
+      <ul>{postList}</ul>
     </span>
   );
 };
