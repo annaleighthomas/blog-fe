@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const API = 'https://limitless-ridge-48909.herokuapp.com/';
+const API = 'https://limitless-ridge-48909.herokuapp.com';
 
 export async function getPost(id) {
   const response = await request
