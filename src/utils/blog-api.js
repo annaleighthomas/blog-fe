@@ -25,7 +25,7 @@ export async function getPosts() {
   return response.body;
 }
 
-export async function addPost(post) {
+export async function addPost(post) { 
   const response = await request
     .post(API + '/api/v1/posts')
     .send(post);
