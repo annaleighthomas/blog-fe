@@ -14,7 +14,7 @@ const BlogPage = () => {
       </li>
     );
   });
-  
+
   return (
     <span className={styles.BlogPage}>
       <h1>
@@ -24,14 +24,14 @@ const BlogPage = () => {
         a travel blog
       </h3>
       <div>
-        <img src={'../../public/pics/image0.jpeg'} />
-        <img src={'../../public/pics/image1.jpeg'} />
-        <img src={'../../public/pics/image2.jpeg'} />
-        <img src={'../../public/pics/image3.jpeg'} />
-        <img src={'../../public/pics/image4.JPG'} />
-        <img src={'../../public/pics/image7.JPG'} />
-        <img src={'../../public/pics/image6.JPG'} />
-        <img src={'../../public/pics/image5.JPG'} />
+        <img src={'./public/pics/image0.jpeg'} />
+        <img src={'./public/pics/image1.jpeg'} />
+        <img src={'./public/pics/image2.jpeg'} />
+        <img src={'./public/pics/image3.jpeg'} />
+        <img src={'./public/pics/image4.JPG'} />
+        <img src={'./public/pics/image7.JPG'} />
+        <img src={'./public/pics/image6.JPG'} />
+        <img src={'./public/pics/image5.JPG'} />
       </div>
       <h5>
         <Link to={'/create-post'}>Create Post Here</Link>
